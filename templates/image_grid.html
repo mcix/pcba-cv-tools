@@ -1,0 +1,24 @@
+<!-- FILEPATH: /Users/avanderheijde/dev/python/wapper/templates/image_grid.html -->
+
+<style>
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .image-grid img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="image-grid">
+        {% for image in images %}
+            <img src="{{ image }}" alt="Image">
+        {% endfor %}
+    </div>
+</body>
+</html> 
