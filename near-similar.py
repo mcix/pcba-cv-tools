@@ -78,7 +78,7 @@ def main():
 
     c, h  =alignImages(a, b)
 
-    blocksize = 30
+    blocksize = 10
     a_blocks = divide_img_blocks(b, (blocksize,blocksize))
     b_blocks =  divide_img_blocks(c, (blocksize,blocksize))
 
@@ -101,9 +101,12 @@ def main():
             w = width
             h = height
             x, y, w, h = w * j, h * i, w-1, h-1  # Rectangle parameters
-            cv.rectangle(overlay, (x, y), (x+w, y+h), (0, 0 , 255*(1-score)), -1)  # A filled rectangle
+
+            dScore = min(255, 255 * ((1 - score) * 10));
+            cv.rectangle(overlay, (x, y), (x+w, y+h), (0, 0 , dScore), -1)  # A filled rectangle
 
     alpha = 0.8  # Transparency factor.
+
     image_new = cv.addWeighted(overlay, alpha, a, 1 - alpha, 0)
 
     cv.imshow( 'overlay', image_new)

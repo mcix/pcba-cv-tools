@@ -79,13 +79,13 @@ def main():
     
     c, h  =alignImages(a, b)
 
-    cv.medianBlur(a, 9, a);
-    cv.medianBlur(b, 9, b);
-    cv.medianBlur(c, 9, c);
+    #cv.medianBlur(a, 9, a);
+    #cv.medianBlur(b, 9, b);
+    #cv.medianBlur(c, 9, c);
 
     #plot_image_grid([a, b, c])
 
-    plt.show()
+    #plt.show()
 
     structuralSimilarityIndex(b, c)
 

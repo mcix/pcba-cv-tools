@@ -15,6 +15,10 @@ Uses OpenCV Stitcher to stich images together (like a panorama function)
 This example tries to find mismatches in the 2 images
 First it aligns the images using align.py
 
+## near-similar.py [work in progress]
+Divide images into blocks, and use OpenAI CLIP (clip-ViT-B-32) to calculate the similarity of the sections.
+Overlay in red the sections that are not similar with a higher opacity.
+
 ## main.py [work in progress]
 Project to expose computer vision tools using a restfull interface.
 
