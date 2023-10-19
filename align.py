@@ -103,7 +103,7 @@ def getColorFromImage(img, channel):
 
 def main():
 
-    b = cv.imread('resources/6065t.jpg')
+    b = cv.imread('resources/6065t.png')
     a = cv.imread('resources/8066t-fout-rotation.jpeg')
     
     c, h  =alignImages(a, b)
